@@ -26,8 +26,11 @@ pipeline {
             } 
             steps {
                 script {
-                    sh 'newman run exemple_reqrest.postman_collection.json -e jdd_env.json'
-                }
+                    sh '''
+                    ls -lah
+                    newman run exemple_reqrest.postman_collection.json -e jdd_env.json
+                    '''               
+                     }
             }
         }
     }
