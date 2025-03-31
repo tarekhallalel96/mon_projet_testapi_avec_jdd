@@ -28,7 +28,7 @@ pipeline {
                 script {
                     sh '''
                     ls -lah
-                    newman run exemple_reqrest.postman_collection.json -e jdd_env.json
+                    newman run exemple_reqrest.postman_collection.json -e jdd.json
                     '''               
                      }
             }
