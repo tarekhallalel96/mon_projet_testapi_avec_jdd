@@ -13,7 +13,7 @@ pipeline {
                     . venv/bin/activate
                     pip install --no-cache-dir -r requirements.txt
                     '''
-                    sh 'python generate_fake_data.py'
+                    sh 'python jdd_faker.py'
                 }
             }
         }
