@@ -35,6 +35,29 @@ pipeline {
                     '''               
                      }
             }
+
+            
+        }
+
+                stage('Generate Allure Report') {
+            steps {
+                script {
+                    // Vérifiez si Allure est installé et générez le rapport
+                    if (sh(script: "command -v allure", returnStatus: true) == 0) {
+                        sh "allure serve ${ALLURE_RESULTS_DIR} --report-dir ${ALLURE_REPORT_DIR}"
+                    } else {
+                        echo "Allure not installed, skipping report generation"
+                    }
+                }
+            }
+        }
+
+
+    }
+
+        post {
+        always {
+            cleanWs()  // Nettoyer l'espace de travail après chaque exécution
         }
     }
 }
