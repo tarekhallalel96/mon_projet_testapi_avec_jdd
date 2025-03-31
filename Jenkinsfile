@@ -22,7 +22,7 @@ pipeline {
         
         stage('Run Postman Collection with Newman') {
             agent { 
-                docker { image 'postman/newman' args '-c sleep infinity'} 
+                docker { image 'postman/newman'} 
             } 
             steps {
                 script {
