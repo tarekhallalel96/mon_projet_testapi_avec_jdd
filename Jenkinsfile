@@ -48,11 +48,11 @@ pipeline {
                 }
             }
         }
-    }
+    
 
     post {
         always {
-            cleanWs()  // Nettoyer l'espace de travail après chaque exécution
+            cleanWs()  
         }
     }
 }
