@@ -1,7 +1,6 @@
 import pandas as pd
 from faker import Faker
-import random
-
+import json
 faker = Faker()
 
 N = 10
@@ -16,6 +15,23 @@ data = {
 }
 df = pd.DataFrame(data)
 
-df.to_csv("jdd.csv")
+environment = {
+    "id": "test-environment",
+    "name": "Test Environment",
+    "values": []
+}
 
-print(df)
+# Parcourir chaque ligne du DataFrame pour créer les variables d'environnement
+for idx, row in df.iterrows():
+    for col in df.columns:
+        environment["values"].append({
+            "key": f"{col}_{idx + 1}",
+            "value": row[col],
+            "enabled": True
+        })
+
+# Sauvegarder en fichier JSON
+with open('jdd.json', 'w') as json_file:
+    json.dump(environment, json_file, indent=4)
+
+print("Fichier jdd.json généré avec succès.")

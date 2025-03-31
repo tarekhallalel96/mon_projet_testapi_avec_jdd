@@ -1,10 +1,256 @@
-{"id":5,"email":"susan88@example.com","first_name":"Andrea","last_name":"Avila","avatar":"https:\/\/dummyimage.com\/495x664"}
-{"id":3,"email":"angelathompson@example.org","first_name":"Amber","last_name":"Contreras","avatar":"https:\/\/placekitten.com\/696\/276"}
-{"id":589,"email":"ggonzalez@example.com","first_name":"Monica","last_name":"Young","avatar":"https:\/\/picsum.photos\/905\/161"}
-{"id":310,"email":"waltermartin@example.org","first_name":"Samantha","last_name":"Johnson","avatar":"https:\/\/picsum.photos\/257\/1"}
-{"id":75042,"email":"coopermelissa@example.net","first_name":"Ricardo","last_name":"Hayes","avatar":"https:\/\/dummyimage.com\/960x188"}
-{"id":3557840,"email":"dbeard@example.com","first_name":"Erika","last_name":"Gallagher","avatar":"https:\/\/picsum.photos\/32\/821"}
-{"id":7,"email":"george95@example.net","first_name":"Brooke","last_name":"Yang","avatar":"https:\/\/picsum.photos\/84\/1001"}
-{"id":23206102,"email":"latoyahaney@example.org","first_name":"Kelly","last_name":"Bryant","avatar":"https:\/\/picsum.photos\/346\/755"}
-{"id":2,"email":"brianbaldwin@example.org","first_name":"Jonathan","last_name":"Shelton","avatar":"https:\/\/picsum.photos\/774\/785"}
-{"id":82,"email":"ryanperkins@example.net","first_name":"Adrian","last_name":"Anderson","avatar":"https:\/\/dummyimage.com\/289x422"}
+{
+    "id": "test-environment",
+    "name": "Test Environment",
+    "values": [
+        {
+            "key": "id_1",
+            "value": 52897213,
+            "enabled": true
+        },
+        {
+            "key": "email_1",
+            "value": "xowen@example.com",
+            "enabled": true
+        },
+        {
+            "key": "first_name_1",
+            "value": "Beth",
+            "enabled": true
+        },
+        {
+            "key": "last_name_1",
+            "value": "Thompson",
+            "enabled": true
+        },
+        {
+            "key": "avatar_1",
+            "value": "https://placekitten.com/258/746",
+            "enabled": true
+        },
+        {
+            "key": "id_2",
+            "value": 43618836,
+            "enabled": true
+        },
+        {
+            "key": "email_2",
+            "value": "davidsonbeverly@example.org",
+            "enabled": true
+        },
+        {
+            "key": "first_name_2",
+            "value": "Regina",
+            "enabled": true
+        },
+        {
+            "key": "last_name_2",
+            "value": "Rodriguez",
+            "enabled": true
+        },
+        {
+            "key": "avatar_2",
+            "value": "https://placekitten.com/765/606",
+            "enabled": true
+        },
+        {
+            "key": "id_3",
+            "value": 319,
+            "enabled": true
+        },
+        {
+            "key": "email_3",
+            "value": "dawn41@example.net",
+            "enabled": true
+        },
+        {
+            "key": "first_name_3",
+            "value": "Kyle",
+            "enabled": true
+        },
+        {
+            "key": "last_name_3",
+            "value": "Williams",
+            "enabled": true
+        },
+        {
+            "key": "avatar_3",
+            "value": "https://placekitten.com/854/223",
+            "enabled": true
+        },
+        {
+            "key": "id_4",
+            "value": 7187281,
+            "enabled": true
+        },
+        {
+            "key": "email_4",
+            "value": "pacejennifer@example.org",
+            "enabled": true
+        },
+        {
+            "key": "first_name_4",
+            "value": "Crystal",
+            "enabled": true
+        },
+        {
+            "key": "last_name_4",
+            "value": "Mathews",
+            "enabled": true
+        },
+        {
+            "key": "avatar_4",
+            "value": "https://placekitten.com/773/820",
+            "enabled": true
+        },
+        {
+            "key": "id_5",
+            "value": 420963495,
+            "enabled": true
+        },
+        {
+            "key": "email_5",
+            "value": "davisdavid@example.net",
+            "enabled": true
+        },
+        {
+            "key": "first_name_5",
+            "value": "Francisco",
+            "enabled": true
+        },
+        {
+            "key": "last_name_5",
+            "value": "Evans",
+            "enabled": true
+        },
+        {
+            "key": "avatar_5",
+            "value": "https://picsum.photos/952/985",
+            "enabled": true
+        },
+        {
+            "key": "id_6",
+            "value": 8414638,
+            "enabled": true
+        },
+        {
+            "key": "email_6",
+            "value": "thomas48@example.net",
+            "enabled": true
+        },
+        {
+            "key": "first_name_6",
+            "value": "Ralph",
+            "enabled": true
+        },
+        {
+            "key": "last_name_6",
+            "value": "Roberts",
+            "enabled": true
+        },
+        {
+            "key": "avatar_6",
+            "value": "https://dummyimage.com/564x863",
+            "enabled": true
+        },
+        {
+            "key": "id_7",
+            "value": 3941,
+            "enabled": true
+        },
+        {
+            "key": "email_7",
+            "value": "wsimmons@example.com",
+            "enabled": true
+        },
+        {
+            "key": "first_name_7",
+            "value": "Megan",
+            "enabled": true
+        },
+        {
+            "key": "last_name_7",
+            "value": "Fox",
+            "enabled": true
+        },
+        {
+            "key": "avatar_7",
+            "value": "https://picsum.photos/832/19",
+            "enabled": true
+        },
+        {
+            "key": "id_8",
+            "value": 528550,
+            "enabled": true
+        },
+        {
+            "key": "email_8",
+            "value": "josephcurtis@example.com",
+            "enabled": true
+        },
+        {
+            "key": "first_name_8",
+            "value": "Vincent",
+            "enabled": true
+        },
+        {
+            "key": "last_name_8",
+            "value": "Ferguson",
+            "enabled": true
+        },
+        {
+            "key": "avatar_8",
+            "value": "https://dummyimage.com/356x934",
+            "enabled": true
+        },
+        {
+            "key": "id_9",
+            "value": 33723,
+            "enabled": true
+        },
+        {
+            "key": "email_9",
+            "value": "curryjames@example.org",
+            "enabled": true
+        },
+        {
+            "key": "first_name_9",
+            "value": "Briana",
+            "enabled": true
+        },
+        {
+            "key": "last_name_9",
+            "value": "Short",
+            "enabled": true
+        },
+        {
+            "key": "avatar_9",
+            "value": "https://placekitten.com/331/879",
+            "enabled": true
+        },
+        {
+            "key": "id_10",
+            "value": 6,
+            "enabled": true
+        },
+        {
+            "key": "email_10",
+            "value": "johnny34@example.org",
+            "enabled": true
+        },
+        {
+            "key": "first_name_10",
+            "value": "Mary",
+            "enabled": true
+        },
+        {
+            "key": "last_name_10",
+            "value": "Lopez",
+            "enabled": true
+        },
+        {
+            "key": "avatar_10",
+            "value": "https://placekitten.com/529/401",
+            "enabled": true
+        }
+    ]
+}
