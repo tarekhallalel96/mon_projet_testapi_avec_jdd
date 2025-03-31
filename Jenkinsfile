@@ -32,12 +32,11 @@ pipeline {
 
                     sh '''
                     ls -lah
-                    newman run exemple_reqrest.postman_collection.json -e jdd.json --reporters cli,allure --reporter-allure-export allure-results
+                    newman run exemple_reqrest.postman_collection.json     -e Mon_api.postman_environment.json     --iteration-data jdd.csv --reporters cli,allure --reporter-allure-export allure-results
                     '''
                 }
             }
         }
-
         stage('Generate Allure Report') {
             steps {
                 script {

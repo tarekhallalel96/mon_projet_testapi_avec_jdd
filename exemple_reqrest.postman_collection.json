@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "https://reqres.in/api/users",
+			"name": "creer utilisateur",
 			"event": [
 				{
 					"listen": "test",
@@ -16,14 +16,22 @@
 							"pm.test(\"La réponse est OK\", function () {",
 							"    pm.response.to.have.status(201);",
 							"});",
+							"",
 							"pm.test(\"Les données sont bien présentes\", function () {",
 							"    var responseJson = pm.response.json();",
+							"",
+							"    // Vérification des propriétés attendues",
 							"    pm.expect(responseJson).to.have.property(\"id\");",
 							"    pm.expect(responseJson).to.have.property(\"email\");",
 							"    pm.expect(responseJson).to.have.property(\"first_name\");",
 							"    pm.expect(responseJson).to.have.property(\"last_name\");",
 							"    pm.expect(responseJson).to.have.property(\"avatar\");",
+							"    ",
+							"    pm.environment.set(\"user_id\", responseJson.id);",
+							"    ",
 							"});",
+							"",
+							"",
 							""
 						],
 						"type": "text/javascript",
@@ -47,15 +55,53 @@
 					}
 				},
 				"url": {
-					"raw": "https://reqres.in/api/users",
-					"protocol": "https",
+					"raw": "{{Base_Url}}/users",
 					"host": [
-						"reqres",
-						"in"
+						"{{Base_Url}}"
 					],
 					"path": [
-						"api",
 						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"L'utilisateur existe\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    ",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.data).to.have.property(\"id\");",
+							"    pm.expect(jsonData.data).to.have.property(\"email\");",
+							"    pm.expect(jsonData.data).to.have.property(\"first_name\");",
+							"    pm.expect(jsonData.data).to.have.property(\"last_name\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_Url}}/users/2",
+					"host": [
+						"{{Base_Url}}"
+					],
+					"path": [
+						"users",
+						"2"
 					]
 				}
 			},
