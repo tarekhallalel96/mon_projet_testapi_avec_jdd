@@ -8,13 +8,12 @@ pipeline {
             }
             steps {
                 script {
-                    sh '''
-                    python3 -m venv venv
-                    . venv/bin/activate
-                    pip install --no-cache-dir -r requirements.txt
-                    '''
-                    sh 'python jdd_faker.py'
-                }
+                sh '''
+                python3 -m venv venv
+                . venv/bin/activate
+                pip install --no-cache-dir -r requirements.txt
+                python jdd_faker.py
+                '''                }
             }
         }
         
