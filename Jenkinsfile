@@ -29,7 +29,7 @@ pipeline {
 }
 steps {
     script {
-        sh 'sudo npm install -g allure-commandline --save-dev'
+        sh 'npm install --prefix ./node_modules allure-commandline --save-dev'
         
         // Lister les fichiers et exécuter la collection Postman avec Newman
         sh '''
