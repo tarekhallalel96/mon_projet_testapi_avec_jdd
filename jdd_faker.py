@@ -16,6 +16,6 @@ data = {
 }
 df = pd.DataFrame(data)
 
-df.to_csv ("jdd.csv", index=False)
+df.to_json("jdd.json", orient="records", lines=True)
 
 print(df)
