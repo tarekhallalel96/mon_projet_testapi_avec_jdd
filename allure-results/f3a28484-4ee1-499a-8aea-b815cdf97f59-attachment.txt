@@ -1,0 +1,1 @@
+{"id":"{{id}}","email":"{{email}}","first_name":"{{first_name}}","last_name":"{{last_name}}","avatar":"{{avatar}}","createdAt":"2025-03-31T15:45:42.140Z"}

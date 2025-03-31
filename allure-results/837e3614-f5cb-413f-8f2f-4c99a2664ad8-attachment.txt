@@ -1,0 +1,11 @@
+pm.test("La réponse est OK", function () {
+    pm.response.to.have.status(201);
+});
+pm.test("Les données sont bien présentes", function () {
+    var responseJson = pm.response.json();
+    pm.expect(responseJson).to.have.property("id");
+    pm.expect(responseJson).to.have.property("email");
+    pm.expect(responseJson).to.have.property("first_name");
+    pm.expect(responseJson).to.have.property("last_name");
+    pm.expect(responseJson).to.have.property("avatar");
+});

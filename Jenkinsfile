@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        ALLURE_RESULTS_DIR = "allure-results"
-        ALLURE_REPORT_DIR = "allure-report"
-    }
     stages {
         stage('Generate Data CSV') {
             agent { 
@@ -31,14 +27,18 @@ pipeline {
                 args '--entrypoint=""' 
             } 
 }
-            steps {
-                script {
-                    sh '''
-                    ls -lah
-                    newman run exemple_reqrest.postman_collection.json -e jdd.json
-                    '''               
-                     }
-            }
+steps {
+    script {
+        sh 'npm install -g allure-commandline --save-dev'
+        
+        // Lister les fichiers et exécuter la collection Postman avec Newman
+        sh '''
+        ls -lah
+        newman run exemple_reqrest.postman_collection.json -e jdd.json --reporters cli,allure --reporter-allure-export allure-results
+        '''
+    }
+}
+
 
             
         }
