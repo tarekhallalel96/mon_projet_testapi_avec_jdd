@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        ALLURE_RESULTS_DIR = "allure-results"
+        ALLURE_REPORT_DIR = "allure-report"
+    }
     stages {
         stage('Generate Data CSV') {
             agent { 
