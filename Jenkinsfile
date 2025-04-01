@@ -35,6 +35,7 @@ pipeline {
                     ls -lah
                     newman run exemple_reqrest.postman_collection.json     -e Mon_api.postman_environment.json     --iteration-data jdd.json --reporters cli,allure --reporter-allure-export allure-results
                     '''
+                    sh 'allure generate allure-results --clean -o allure-report'
                 }
             }
         }
