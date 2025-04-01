@@ -6,7 +6,6 @@ pipeline {
             agent { 
                 docker {
                     image 'python:3.9-slim'
-                    
                 }
             }
             steps {
@@ -29,31 +28,26 @@ pipeline {
             }
             steps {
                 script {
-                    sh 'npm install --prefix ./node_modules allure-commandline --save-dev'
+                    sh 'npm install -g allure-commandline'
 
                     sh '''
                     ls -lah
-                    newman run exemple_reqrest.postman_collection.json     -e Mon_api.postman_environment.json     --iteration-data jdd.json --reporters cli,allure --reporter-allure-export allure-results
+                    newman run exemple_reqrest.postman_collection.json \
+                        -e Mon_api.postman_environment.json \
+                        --iteration-data jdd.json \
+                        --reporters cli,allure \
+                        --reporter-allure-export allure-results
                     '''
+
                     sh 'allure generate allure-results --clean -o allure-report'
                 }
             }
         }
-        stage('Generate Allure Report') {
-            steps {
-                script {
-                        def allureResultsDir = 'allure-results'
-                        def allureReportDir = 'allure-report'
-                        sh "allure serve ${allureResultsDir} --report-dir ${allureReportDir}"
-                    }
-                }
-            }
-        }
-    
+    }
 
     post {
         always {
-            cleanWs()  
+            cleanWs()
         }
     }
 }
